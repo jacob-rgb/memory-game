@@ -1,0 +1,9 @@
+<div class="board">
+  <app-card *ngFor="let card of cards" [card]="card" (cardClick)="enabled ? decide($event) : null">
+  </app-card>
+</div>
+<div id="cont">
+  <h4>Intentos: &nbsp; <span>{{Attempts}}</span></h4>
+  <h4>Puntuación: &nbsp; <span>{{Points}}</span></h4>
+  <button (click) = "startGame()">Start Game</button>
+</div>
